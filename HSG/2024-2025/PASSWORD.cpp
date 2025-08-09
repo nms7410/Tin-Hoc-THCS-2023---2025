@@ -29,7 +29,7 @@ void solve(){
     
     getline(cin, s);
 
-    if (s.size() < 8) {
+    if (s.size() < 6) {
         cout << 0;
         return;
     }
@@ -80,4 +80,5 @@ signed main(){
 /*
    You wished me happiness,
    but my happiness was you.
+
 */
