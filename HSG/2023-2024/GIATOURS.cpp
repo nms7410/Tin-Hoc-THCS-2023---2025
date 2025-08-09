@@ -27,22 +27,22 @@ int n, m, k;
 long double calc(){
 
     int people = n + m;
-    int total_cash = (k * n) + (m * k / 2.0);
-    int t = 0;
+    long double total_cash = (k * n) + (m * (k / 2.0));
+    long double t = 0.0;
 
     if (people < 15) return total_cash;
-    
+
     else if (people >= 15 && people <= 25) t = (total_cash * 5) / 100;
     else if (people >= 26 && people <= 35) t = (total_cash * 10) / 100;
     else if (people >= 36 && people <= 45) t = (total_cash * 15) / 100;
-    else k = (total_cash * 20) / 100;
+    else t = (total_cash * 20) / 100;
 
     return total_cash - t;
 
 }
 
 void solve(){
-    
+
     cin >> n >> m >> k;
 
     cout << fixed << setprecision(2) << calc();
