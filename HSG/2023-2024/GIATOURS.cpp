@@ -32,13 +32,10 @@ long double calc(){
 
     if (people < 15) return total_cash;
     
-    if (people >= 15 && people <= 25) t = (total_cash * 5) / 100;
-
-    if (people >= 26 && people <= 35) t = (total_cash * 10) / 100;
-
-    if (people >= 36 && people <= 45) t = (total_cash * 15) / 100;
-
-    if (people > 45) k = (total_cash * 20) / 100;
+    else if (people >= 15 && people <= 25) t = (total_cash * 5) / 100;
+    else if (people >= 26 && people <= 35) t = (total_cash * 10) / 100;
+    else if (people >= 36 && people <= 45) t = (total_cash * 15) / 100;
+    else k = (total_cash * 20) / 100;
 
     return total_cash - t;
 
