@@ -24,7 +24,7 @@ using namespace std;
 
 int n, sum;
 
- void sum_div(int n){
+void sum_div(int n){
 
     for (int i = 1; i * i <= n; ++i) {
         if (n % i == 0) {
@@ -67,4 +67,5 @@ signed main(){
 /*
    You wished me happiness,
    but my happiness was you.
+
 */
