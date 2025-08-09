@@ -23,12 +23,17 @@ const int MOD  = 1e9+7;
 using namespace std;
 
 int n, s;
-int a[maxn];
+int a[maxn], prf[maxn];
 
 void trace(int l, int r){
 
-    for (int i = l; i <= r; ++i) cout << a[i] << " ";
-    cout << el;
+    if (l > r) {
+        cout << el;
+        return;
+    }
+
+    cout << a[l] << " ";;
+    trace(l + 1, r);
 
 }
 
@@ -36,13 +41,15 @@ void solve(){
     
     cin >> n >> s;
 
-    for (int i = 1; i <= n; ++i) cin >> a[i];
+    for (int i = 1; i <= n; ++i) {
+        cin >> a[i];
+        prf[i] = prf[i - 1] + a[i];
+    }
 
     int cnt = 0;
     for (int i = 1; i < n; ++i) {
-        int sum = a[i];
         for (int j = i + 1; j <= n; ++j) {
-            sum += a[j];
+            int sum = prf[j] - prf[i - 1];
             if (sum == s) {
                 trace(i, j);
                 cnt++;
