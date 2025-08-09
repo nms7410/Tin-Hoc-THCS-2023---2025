@@ -24,7 +24,7 @@ using namespace std;
 
 int n;
 int a[maxn], compress[maxn];
-int tree[maxn];
+int tree[4 * maxn];
 
 void update(int id, int l, int r, int pos, int val){
 
@@ -96,4 +96,5 @@ signed main(){
 /*
    You wished me happiness,
    but my happiness was you.
+
 */
