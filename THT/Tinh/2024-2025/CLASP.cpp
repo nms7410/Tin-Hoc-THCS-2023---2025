@@ -31,8 +31,8 @@ void solve(){
     cin >> n >> s;
 
     for (int i = 0; i < n; ++i) {
-        if (s[i] == '>') prf[i] = prf[i - 1] + 1;
-        else prf[i] = prf[i - 1];
+        prf[i] = prf[i - 1];
+        if (s[i] == '>') prf[i]++;
     }
 
     int result = 0;
